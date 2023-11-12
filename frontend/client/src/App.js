@@ -1,15 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Provider } from 'react-redux'
 
 import DashboardPage from './containers/DashboardPage'
 import LoginPage from './containers/LoginPage'
 import RegisterPage from './containers/RegisterPage'
 import HomePage from './containers/HomePage'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
-import { store } from 'store'
+
 
 const App = () => (
-      <Provider store={store}>
+        <Provider store={store}>
           <Router>
             <Routes>
                 <Route path='/' element={<HomePage/>}/>
@@ -18,7 +19,7 @@ const App = () => (
                 <Route path='/register' element={<RegisterPage/>}/>
             </Routes>
           </Router>
-      </Provider>
+    </Provider>
   )
 
   export default App
