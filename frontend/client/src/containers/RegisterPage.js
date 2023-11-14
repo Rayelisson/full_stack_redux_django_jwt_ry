@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
 import { Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { register } from '../features/user';
+import { register } from 'features/user';
 
 const RegisterPage = () => {
 	const dispatch = useDispatch();
